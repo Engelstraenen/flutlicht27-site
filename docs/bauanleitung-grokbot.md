@@ -207,11 +207,9 @@ Light haze, deep contrast, warm amber bar light, vivid blue court floor, dark an
 ```
 
 ### Finale in 2K
-Erst nach Eugens OK zum Test **und** zum Preis. Wenn das Werkzeug ein Referenzvideo annimmt: den abgenommenen Test (auf höchstens 15 s gekürzt) als @Video1 mitgeben und diesen Block an den Prompt anhängen:
-```
-@Video1 is the exact MOTION AND TIMING REFERENCE: reproduce the same camera path, the same timing, the same people and the same actions as in @Video1, frame for frame, only in far higher resolution, sharper detail and cleaner motion. Keep @Image1 as the exact opening frame and @Image2 as the exact final frame.
-```
-Ohne Referenzvideo: denselben Prompt mit denselben Start- und Endbildern in 2K rendern und das Ergebnis wieder komplett prüfen.
+Erst nach Eugens OK zum Test **und** zum Preis.
+
+**FESTE REGEL (Eugen, 17.11.2026): Niemals einen Test oder Entwurf in schlechter Qualität (Unlimited 480p/768p, gekürzte oder neu aufgenommene Fassungen) als Referenzvideo an ein hochwertiges Render geben.** Das Modell baut die Vorlage originalgetreu nach und übernimmt dabei ihre Unschärfe; genau so ist der erste 2K-Clip 1 matschig geworden (verbrannte Credits). Das Finale entsteht **nur** aus dem Prompt plus den hochwertigen 4K-Start- und Endbildern, in der höchsten Auflösung, die das Werkzeug anbietet. Der Test dient ausschließlich dazu, Prompt und Bewegung zu prüfen. Danach das Ergebnis komplett prüfen (Schärfe Sekunde für Sekunde, Leute, Netz, Übergänge).
 
 ---
 
