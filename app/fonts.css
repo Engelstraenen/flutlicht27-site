@@ -1,0 +1,4 @@
+/* Archivo, lokal und verkleinert (Achsen wdth 100–125, wght 400–900; Zeichen: Basis-Latein + Deutsch + Satzzeichen).
+   Erzeugt mit fontTools aus @fontsource-variable/archivo, siehe docs/bauanleitung-grokbot.md. Beide Dateien werden im Layout vorgeladen. */
+@font-face { font-family: "Archivo Variable"; font-style: normal; font-display: swap; font-weight: 400 900; font-stretch: 100% 125%; src: url(/fonts/archivo-normal.woff2) format("woff2-variations"); }
+@font-face { font-family: "Archivo Variable"; font-style: italic; font-display: swap; font-weight: 400 900; font-stretch: 100% 125%; src: url(/fonts/archivo-italic.woff2) format("woff2-variations"); }
