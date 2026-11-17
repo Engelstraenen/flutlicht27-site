@@ -76,3 +76,10 @@ Hinweis: die Bilder „Halle v2“ und „Bar v2“ aus Runde 2 stammen von Nano
 Clip 1: Halle v2 → Court von oben (läuft, MiniMax H3 Unlimited, Prompt Runde 2).
 Clip 2 (MiniMax H3 Unlimited, sobald frei, 10–12 s): Court von oben → gemischtes Doppel → Spielerin in Lila schmettert direkt in die Linse → Endbild Ball füllt das Bild. Auf der Seite dann `CLIP2_END = 1`, `CLIP2_WIPE = false`.
 Clip 3 (Wan 3.0 Unlimited, sobald frei, 12 s): Ball auf der Theke → Barkeeperin reicht Cocktail an rothaarige Frau im grünen Jeanshemd, Toast mit Mann im senffarbenen Hoodie → Rückwärtsfahrt an der Bar entlang → Aufstieg → Halle exakt von oben. Prompt mit Block „PEOPLE, VERY IMPORTANT … half women and half men, ages 20 to 60 … different heights and builds …“. Auf der Seite dann `CLIP3 = "/video/clip3.mp4"`.
+
+## Runde 4 (Eugen 21:05): alle drei Clips neu, NUR Prompt + 4K-Start-/Endbild, KEIN Referenzvideo
+MiniMax H3 2K über `create_video_task`, 150 Credits/s (Clip 1 10 s = 1.500, Clip 2/3 je 12 s = 1.800, zusammen 5.100, von Eugen bestätigt).
+- Clip 1 (f5bb0f9c, neu ruhig, 10 s): Halle v2 → Court von oben. https://edit.comfyonline.app/result/901d8594-9f6a-4699-8558-44d168d7df8b.mp4
+- Clip 2 (46301fd8, 12 s): Court von oben → Smash → Ball füllt das Bild. https://edit.comfyonline.app/result/d1d8de04-df60-4fed-b82e-ab0ad4ab7908.mp4
+- Clip 3 (f1e597c9, 12 s): Ball auf der Theke → Halle von oben. https://edit.comfyonline.app/result/603e59cb-ca34-45ee-8ade-03dcde1b03b1.mp4
+Prompts wie Runde 3, ohne den @Video1-Block, dafür mit Block „SHARPNESS, VERY IMPORTANT …“; Clip 1 neu mit „CAMERA, SLOW AND CALM“ (gleitende Kamerafahrt statt FPV). Kein Upscaler nötig. Hallenplan `PLAN` neu vermessen: x 318/568/853/1128, y 52/512, 216×360.
