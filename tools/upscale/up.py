@@ -11,7 +11,11 @@ T, OV, S = 128, 12, 4
 def session():
     o = ort.SessionOptions()
     o.intra_op_num_threads = 0
-    return ort.InferenceSession(__file__.replace("up.py", "x4v3dyn.onnx"), o, providers=["CPUExecutionProvider"])
+    # x4v3q.onnx = 8-Bit-Fassung (etwa 1,6× schneller, kaum sichtbarer Unterschied), sonst volle Genauigkeit
+    import os
+    q = __file__.replace("up.py", "x4v3q.onnx")
+    path = q if os.path.exists(q) else __file__.replace("up.py", "x4v3dyn.onnx")
+    return ort.InferenceSession(path, o, providers=["CPUExecutionProvider"])
 
 
 def make_dynamic():
