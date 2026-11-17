@@ -1,0 +1,5 @@
+:HL["/flutlicht27-site/_next/static/chunks/38wm2-8_ru5hf.css","style"]
+:HL["/flutlicht27-site/fonts/archivo-italic.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
+:HL["/flutlicht27-site/fonts/archivo-normal.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"rLIkfbZvdAo6uJlnpPGGg","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
