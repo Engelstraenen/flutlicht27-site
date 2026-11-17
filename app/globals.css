@@ -326,3 +326,6 @@ html.static .mt-court { height: 50vh; display: block; }
 html.static .mt-ball, html.static .hit { display: none; }
 html.static .trail { stroke-dashoffset: 0; }
 html.static .film[data-film="3"] .shot { opacity: 1 !important; }
+/* Handy: letzte Verleih-Karte nicht am rechten Rand abschneiden */
+.outro-card { box-sizing: content-box; padding-right: var(--pad); }
+@media (max-width: 600px) { .outro-card a { letter-spacing: 0.05em; font-size: 15px; } }

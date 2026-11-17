@@ -59,7 +59,7 @@ const C_PLAN = S.bridgeC[0] + 0.02 * (S.bridgeC[1] - S.bridgeC[0]); // vh, hier 
 // Position des Balls im ersten Bild von Film 3 (Anteil der Bildbreite/-höhe, Bild 16:9) und Durchmesser (Anteil der Höhe)
 const LAND = { x: 0.51, y: 0.657, d: 0.26 };
 // Die acht Courts im letzten Bild von Clip 3 (viewBox 1600×900, gemessen per Farbmaske an der 2K-Fassung)
-const PLAN = [332, 576, 847, 1106].flatMap((x) => [74, 517].map((y) => ({ x, y, w: 208, h: 338 })));
+const PLAN = [318, 568, 853, 1128].flatMap((x) => [52, 512].map((y) => ({ x, y, w: 216, h: 360 })));
 
 // Spielersuche: drei Plätze belegt, einer frei. Score springt mit dem Ballweg.
 const SQUAD = [
@@ -410,7 +410,10 @@ export default function Stage() {
       // Der Plan bleibt stehen, bis die Bühne nach oben wegscrollt und der Abschnitt „Spielen“ nachrückt (keine Schwarzblende).
       plan.style.opacity = "1";
       const pm = smooth((bC - 0.42) / 0.3);
-      plan.style.transform = `translate3d(0, ${pm * 13}vh, 0) scale(${1 - pm * 0.36})`;
+      // Hochformat: so weit verkleinern, dass alle 8 Courts sichtbar sind (die Grafik ist auf 1600×900 „slice“ angelegt)
+      const sSlice = Math.max(window.innerWidth / 1600, window.innerHeight / 900);
+      const endScale = Math.min(0.64, (0.94 * window.innerWidth) / sSlice / 1060);
+      plan.style.transform = `translate3d(0, ${pm * 13}vh, 0) scale(${1 - pm * (1 - endScale)})`;
       planDim.style.opacity = String(smooth((bC - 0.25) / 0.35));
       const ph = smooth((bC - 0.5) / 0.2) * (1 - smooth((bC - 0.9) / 0.1));
       planHead.style.opacity = String(ph);
